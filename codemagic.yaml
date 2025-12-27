@@ -1,0 +1,21 @@
+workflows:
+  ios-workflow:
+    name: iOS Build
+    max_build_duration: 60
+    environment:
+      xcode: latest
+    scripts:
+      - name: Build and archive
+        script: |
+          set -ex
+          # Archive the project
+          xcodebuild -project InventoryApp.xcodeproj -scheme InventoryApp -configuration Release -archivePath $CM_BUILD_DIR/InventoryApp.xcarchive archive
+
+          # Export the archived app to an .ipa using the provided ExportOptions.plist
+          xcodebuild -exportArchive -archivePath $CM_BUILD_DIR/InventoryApp.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath $CM_BUILD_DIR/ipa
+
+    artifacts:
+      - $CM_BUILD_DIR/ipa/*.ipa
+    publishing:
+      scripts:
+        - echo "Build finished. Artifacts available in $CM_BUILD_DIR/ipa"
