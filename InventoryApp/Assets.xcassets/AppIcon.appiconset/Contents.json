@@ -1,0 +1,32 @@
+{
+  "images" : [
+    {
+      "filename" : "AppIcon~universal~ios-marketing.png",
+      "idiom" : "ios-marketing",
+      "scale" : "1x",
+      "size" : "1024x1024"
+    },
+    {
+      "filename" : "AppIcon@1x.png",
+      "idiom" : "iphone",
+      "scale" : "1x",
+      "size" : "120x120"
+    },
+    {
+      "filename" : "AppIcon@2x.png",
+      "idiom" : "iphone",
+      "scale" : "2x",
+      "size" : "120x120"
+    },
+    {
+      "filename" : "AppIcon@3x.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "120x120"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

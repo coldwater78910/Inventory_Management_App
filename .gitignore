@@ -1,0 +1,32 @@
+# Xcode
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcworkspace/
+xcuserdata/
+*.xcodeproj/xcuserdata/
+DerivedData/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Swift Package Manager
+.build/
+*.xcodeproj/
+
+# IDE
+.vscode/
+.DS_Store
+*.swp
+*.swo
+
+# Runtime
+.env
+.env.local
+
+# App-specific
+*.db
+*.sqlite
